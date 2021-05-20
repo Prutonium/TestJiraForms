@@ -11,5 +11,41 @@
   <input type="text" id="issue" name="issue" value="">
 </form>
 
+  
+  <!-- Comment -->
+  <!--No auth needed as anonymous? unsure. Find way to use the clients name from site.
+
+PID=10011 (find by inspecting page of project, and search for pid=
+
+their example
+http://host:port/context/rest/api-name/api-version/resource-name
+https://jira.atlassian.com/rest/api/latest/issue/JRA-9
+
+working example of CDI https://chemicaldata.atlassian.net/rest/api/latest/issue/ADMIN-9?expand=names
+
+need to get tool to make requests like curl. 
+curl sends data file with POST data (example data.txt)
+curl via termnial window?
+then get response. 
+
+
+
+curl -D- -u fred:fred -X POST --data {see below} -H "Content-Type: application/json" http://localhost:8090/rest/api/2/issue/
+{
+    "fields": {
+       "project":
+       {
+          "key": "TEST"
+       },
+       "summary": "REST ye merry gentlemen.",
+       "description": "Creating of an issue using project keys and issue type names using the REST API",
+       "issuetype": {
+          "name": "Bug"
+       }
+   }
+}
+
+-->
+  
 </body>
 </html>
